@@ -1,0 +1,6 @@
+--POST MAN VISUALISER--
+
+code :
+
+let template='{{#each response}}--Your html---{{/each}}';
+pm.visualizer.set(template,{response : pm.response.json()})

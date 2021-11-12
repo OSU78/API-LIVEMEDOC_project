@@ -1,0 +1,324 @@
+use livmedoc
+
+db.countersUtilisateur.insert({_id:"utilisateurid",sequence_value:0})
+db.countersPatient.insert({_id:"patientid",sequence_value:0})
+db.countersMedecin.insert({_id:"medecinid",sequence_value:0})
+db.countersPharmacien.insert({_id:"pharmacienid",sequence_value:0})
+db.countersLivreur.insert({_id:"livreurid",sequence_value:0})
+db.countersAllergie.insert({_id:"allergieid",sequence_value:0})
+db.countersTraitement.insert({_id:"traitementid",sequence_value:0})
+db.countersAssuranceMaladie.insert({_id:"assuranceMaladieid",sequence_value:0})
+db.countersOrdonnance.insert({_id:"ordonnanceid",sequence_value:0})
+db.countersMedicament.insert({_id:"medicamentid",sequence_value:0})
+db.countersNotice.insert({_id:"noticeid",sequence_value:0})
+db.countersPharmacie.insert({_id:"pharmacieid",sequence_value:0})
+db.countersProduit.insert({_id:"produitid",sequence_value:0})
+db.countersCommande.insert({_id:"commandeid",sequence_value:0})
+db.countersPossederTraitement.insert({_id:"possederTraitementid",sequence_value:0})
+db.countersAvoirAllergie.insert({_id:"avoirAllergieid",sequence_value:0})
+db.countersCorrespondreMedicament.insert({_id:"correspondreMedicamentid",sequence_value:0})
+db.countersSuivreCommande.insert({_id:"suivreCommandeid",sequence_value:0})
+db.countersLivrerCommande.insert({_id:"livrerCommandeid",sequence_value:0})
+db.counterscomporterMedicament.insert({_id:"comporterMedicamentid",sequence_value:0})
+db.countersChoisirPharmacie.insert({_id:"choisirPharmacieid",sequence_value:0})
+db.countersAvoirProduit.insert({_id:"avoirProduitid",sequence_value:0})
+
+
+function getUtilisateurId(sequenceName){
+   var sequenceDocument = db.countersUtilisateur.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+
+
+function getPatientId(sequenceName){
+   var sequenceDocument = db.countersPatient.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+
+
+function getMedecinId(sequenceName){
+   var sequenceDocument = db.countersMedecin.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getPharmacienId(sequenceName){
+   var sequenceDocument = db.countersPharmacien.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getLivreurId(sequenceName){
+   var sequenceDocument = db.countersLivreur.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getAllergieId(sequenceName){
+   var sequenceDocument = db.countersAllergie.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getTraitementId(sequenceName){
+   var sequenceDocument = db.countersTraitement.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getAssuranceMaladieId(sequenceName){
+   var sequenceDocument = db.countersAssuranceMaladie.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getOrdonnanceId(sequenceName){
+   var sequenceDocument = db.countersOrdonnance.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getMedicamentId(sequenceName){
+   var sequenceDocument = db.countersMedicament.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getNoticeId(sequenceName){
+   var sequenceDocument = db.countersNotice.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getPharmacieId(sequenceName){
+   var sequenceDocument = db.countersPharmacie.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getProduitId(sequenceName){
+   var sequenceDocument = db.countersProduit.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getCommandeId(sequenceName){
+   var sequenceDocument = db.countersCommande.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getPossederTraitementId(sequenceName){
+   var sequenceDocument = db.countersPossederTraitement.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getAvoirAllergieId(sequenceName){
+   var sequenceDocument = db.countersAvoirAllergie.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getCorrespondreMedicamentId(sequenceName){
+   var sequenceDocument = db.countersCorrespondreMedicament.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getChoisirPharmacieId(sequenceName){
+   var sequenceDocument = db.countersChoisirPharmacie.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getComporterMedicamentId(sequenceName){
+   var sequenceDocument = db.counterscomporterMedicament.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+function getAvoirProduitId(sequenceName){
+   var sequenceDocument = db.countersAvoirProduit.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getSuivreCommandeId(sequenceName){
+   var sequenceDocument = db.countersSuivreCommande.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+function getLivrerCommandeId(sequenceName){
+   var sequenceDocument = db.countersLivrerCommande.findAndModify({
+      query:{_id: sequenceName },
+      update: {$inc:{sequence_value:1}},
+      new:true
+   });
+   return sequenceDocument.sequence_value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+db.utilisateur.insert({_id:getUtilisateurId("utilisateurid"),nom : "Dupont", prenom : "Julien", sexe : "homme", adresse :"32 rue Convention", ville : "Paris", codepostal : 75015, email : "j.dupont@gmail.com", motdepasse : "abcd1234"})
+db.utilisateur.insert({_id:getUtilisateurId("utilisateurid"),nom : "Richard", prenom : "Jean", sexe : "homme", adresse :"3 rue Vaugirard", ville : "Paris", codepostal : 75015, email : "j.richard@gmail.com", motdepasse : "abcd1234"})
+db.utilisateur.insert({_id:getUtilisateurId("utilisateurid"),nom : "Marchand", prenom : "Carole", sexe : "femme", adresse :"12 rue Cauchy", ville : "Paris", codepostal : 75015, email : "c.marchand@hotmail.com", motdepasse : "abcd1234"})
+db.utilisateur.insert({_id:getUtilisateurId("utilisateurid"),nom : "Martel", prenom : "Georges", sexe : "homme", adresse :"2 rue Borromée", ville : "Paris", codepostal : 75015, email : "g.martel@gmail.com", motdepasse : "abcd1234"})
+
+
+db.patient.insert({_id:getPatientId("patientid"),nom : "Dupont", prenom : "Julien", sexe : "homme", adresse :"32 rue Convention", ville : "Paris", codepostal : 75015, email : "j.dupont@gmail.com", motdepasse : "abcd1234", age : 20, enceinte : false, allaitement : false, idAs : 1})
+
+
+db.medecin.insert({_id:getMedecinId("medecinid"),nom : "Richard", prenom : "Jean", sexe : "homme", adresse :"3 rue Vaugirard", ville : "Paris", codepostal : 75015, email : "j.richard@gmail.com", motdepasse : "abcd1234"})
+
+
+db.pharmacien.insert({_id:getPharmacienId("pharmacienid"),nom : "Marchand", prenom : "Carole", sexe : "femme", adresse :"12 rue Cauchy", ville : "Paris", codepostal : 75015, email : "c.marchand@hotmail.com", motdepasse : "abcd1234", idPha : 1})
+
+
+db.livreur.insert({_id:getLivreurId("livreurid"),nom : "Martel", prenom : "Georges", sexe : "homme", adresse :"2 rue Borromée", ville : "Paris", codepostal : 75015, email : "g.martel@gmail.com", motdepasse : "abcd1234"})
+
+
+db.allergie.insert({_id:getAllergieId("allergieid"),libelle : "acariens"})
+
+
+db.traitement.insert({_id:getTraitementId("traitementid"),libelle : "antihistaminique"})
+
+
+db.assurancemaladie.insert({_id:getAssuranceMaladieId("assuranceMaladieid"),libelle : "ameli"})
+
+
+db.ordonnance.insert({_id:getOrdonnanceId("ordonnanceid"),dateordo : "30/04/2021", photo : "ordonnance.jpg" , contenu : "antihistaminique 2 boites", idPa : 1, idM : 2 })
+
+
+db.medicament.insert({_id:getMedicamentId("medicamentid"),libelle : "doliprane", photo : "doliprane.jpg", description : "antalgique et antipyrétique"})
+
+
+db.notice.insert({_id:getNoticeId("noticeid"),medicament : "doliprane", description : "noticedoliprane.pdf", idMe : 1})
+
+
+db.pharmacie.insert({_id:getPharmacieId("pharmacieid"),nom : "Pharmacie Lourmel", adresse : "105 avenue FélixFaure", codepostal : 75015, ville : "Paris", horaireouverture : 10, horairefermeture : 19})
+
+
+db.produit.insert({_id:getProduitId("produitid"),libelle : "masque FFP2", photo : "masque.jpg", description : "modèle de masque de protection autofiltrant de type jetable", idPha : 1})
+
+
+db.commande.insert({_id:getCommandeId("commandeid"),datelivraison : "05/05/2021", horairelivraison : "10h - 14h", modulepaiement : "PayPal"})
+
+
+db.posseder_traitement.insert({_id:getPossederTraitementId("possederTraitementid"),idT : 1, idPha : 1})
+
+
+db.avoir_allergie.insert({_id:getAvoirAllergieId("avoirAllergieid"),idAl : 1, idPa : 1})
+
+
+db.correspondre_medicament.insert({_id:getCorrespondreMedicamentId("correspondreMedicamentid"),idO : 1, idMe : 1})
+
+
+db.choisir_pharmacie.insert({_id:getChoisirPharmacieId("choisirPharmacieid"),idPa : 1, idPha : 1})
+
+
+db.comporter_medicament.insert({_id:getComporterMedicamentId("comporterMedicamentid"),idMe : 1, idCo : 1})
+
+
+db.avoir_produit.insert({_id:getAvoirProduitId("avoirProduitid"),idPo : 1, idMe : 1})
+
+
+db.suivre_commande.insert({_id:getSuivreCommandeId("suivreCommandeid"),idPh : 3, idCo : 1})
+
+
+db.livrer_commande.insert({_id:getLivrerCommandeId("livrerCommandeid"),idL : 4, idCo : 1})
